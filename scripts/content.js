@@ -1,13 +1,31 @@
-function delay(milliseconds){
-    return new Promise(resolve => {
-        setTimeout(resolve, milliseconds);
-    });
+function getCanonicalHost(hostname) {
+    const MAX_TLD_LENGTH = 3;
+    
+    function isNotTLD(_) { return _.length > MAX_TLD_LENGTH; };
+  
+    hostname = hostname.split('.');
+    hostname = hostname.slice(Math.max(0, hostname.findLastIndex(isNotTLD)));
+    hostname = hostname.join('.');
+  
+    return hostname;
+  }
+
+  function UrlExists(url)
+{
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
 }
 
 
 (async () => {
     console.log("ok")
     try {
+        if(!UrlExists(chrome.runtime.getURL("websites/"+getCanonicalHost(new URL(window.location.href).host)+"/script.js"))){
+            return
+        }
+        
 
         await console.log("BW - Load default style")
 
@@ -47,13 +65,13 @@ function delay(milliseconds){
             await console.log("BW - Loading page script")
         
             script = await document.createElement('script');
-            await script.setAttribute("src", chrome.runtime.getURL("websites/"+new URL(window.location.href).host+"/script.js"));
+            await script.setAttribute("src", chrome.runtime.getURL("websites/"+getCanonicalHost(new URL(window.location.href).host)+"/script.js"));
             await document.body.appendChild(script)
         
             await console.log("BW - Loading page assets")
         
             style = await document.createElement('link');
-            await style.setAttribute("href", chrome.runtime.getURL("websites/"+new URL(window.location.href).host+"/style.css"));
+            await style.setAttribute("href", chrome.runtime.getURL("websites/"+getCanonicalHost(new URL(window.location.href).host)+"/style.css"));
             await style.setAttribute("rel", "stylesheet")
             await document.body.appendChild(style)
         }
