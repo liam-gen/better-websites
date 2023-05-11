@@ -1,4 +1,4 @@
-.modal-window {
+.bw-modal-window {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.25);
     top: 0;
@@ -11,12 +11,12 @@
     pointer-events: none;
     transition: all 0.3s;
   }
-  .modal-window:target {
+  .bw-modal-window:target {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
   }
-  .modal-window > div {
+  .bw-modal-window > div {
     width: 400px;
     position: absolute;
     top: 50%;
@@ -25,15 +25,15 @@
     padding: 2em;
     background: white;
   }
-  .modal-window header {
+  .bw-modal-window header {
     font-weight: bold;
   }
-  .modal-window h1 {
+  .bw-modal-window h1 {
     font-size: 150%;
     margin: 0 0 15px;
   }
   
-  .modal-close {
+  .bw-modal-close {
     color: #aaa;
     line-height: 50px;
     font-size: 80%;
@@ -45,15 +45,15 @@
     text-decoration: none;
   }
 
-  .modal-window > div {
+  .bw-modal-window > div {
     border-radius: 1rem;
   }
   
-  .modal-window div:not(:last-of-type) {
+  .bw-modal-window div:not(:last-of-type) {
     margin-bottom: 15px;
   }
   
-  .logo {
+  .bw-logo {
     max-width: 150px;
     display: block;
   }
@@ -62,18 +62,18 @@
     color: lightgray;
   }
   
-  .btn {
+  .bw-btn {
     background-color: white;
     padding: 1em 1.5em;
     border-radius: 0.5rem;
     text-decoration: none;
     
   }
-  .btn i {
+  .bw-btn i {
     padding-right: 0.3em;
   }
 
-  .nobtn{
+  .bw-nobtn{
     background: none;
     color: inherit;
     border: none;
