@@ -1,0 +1,2 @@
+- Modification du style de la fenêtre
+- Modification des informations publiques

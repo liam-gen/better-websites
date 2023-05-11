@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Sigmar&display=swap');
+
+:root{
+    --background: url();
+    --text-color: #FFFFFF
+}
+
+/* EDITED CONTENT */
+
+.bw-content{
+    background-color: #2D2D2D !important;
+    color: var(--text-color);
+    background: var(--background) no-repeat center center fixed; 
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bw-div-content{
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.bw-search-bar{
+    background-color: #1D1D1D !important;
+    color:white !important;
+    border-radius: 5px !important;
+    border: 0 !important;
+    padding: 5px !important;
+    margin: 2px !important;
+}
+
+/* DEFAULT CONTENT */
+
+.adsbygoogle{
+    display: none !important;
+}
+
+center{
+    display: none !important;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background: #5D5D5D;
+    background: var(--background) no-repeat center center fixed;
+    background-size: cover;
+}
+
+#navi ul{
+    background-color: #3D3D3D;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#navi ul li{
+    display: flex;
+    align-items: center;
+}
+
+#navi ul li a{
+    display: flex;
+    background-color: #1D1D1D;
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+.ext-align-text{
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Sigmar', cursive;
+    color: var(--text-color);
+}
+
+a:hover{
+    background: blue !important;
+    border-radius: 5px !important;
+}
+
+a{
+    color: #219ebc;
+}
+
+font[color=gray]{
+    color: var(--text-color) !important;
+}
+
+table{
+    background: #1D1D1D;
+}
+
+td img{
+    background: white;
+    border-radius: 5px;
+}
+
+img[src="/logo2.gif"]{
+    display: none;
+}
+
+font[color=INDIGO]{
+    color: var(--text-color) !important;
+}
+
+span[style*="background-color"]{
+    background-color: blue !important 
+}
+
+font[style*="background-color"]{
+    background-color: blue !important 
+}
+
+#menu1 ul{
+    z-index:999 
+}
+
+*[color="black"]{
+    color: var(--text-color)
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    background: #4D4D4D;
+  }
+  
+
+  ::-webkit-scrollbar-thumb {
+    background: #1D1D1D;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2D2D2D;
+  }

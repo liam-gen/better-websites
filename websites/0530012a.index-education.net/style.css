@@ -1,0 +1,29 @@
+.dotty{
+    background-color: rgba(23, 23, 23) !important;
+    background: var(--background) no-repeat center center fixed;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+*[color="black"] *[color="#000000"]{
+    color: #dbdddf;
+}
+
+
+div[id^="GInterface.Instances[2]_colonne_"] article{
+    background-color: rgba(23, 23, 23) !important;
+    color: #dbdddf !important;
+}
+
+h2, h1, h3, h4{
+    color: #008353 !important;
+}
+
+.ObjetBandeauEspace{
+    background-color:rgba(23, 23, 23) !important;
+    color:white
+}
+
+.ObjetBandeauPied{
+    display: none;
+}

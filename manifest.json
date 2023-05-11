@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Better websites",
+  "version": "1.0.2",
+  "author": "liamgen.js",
+  "description": "L'extension Better Websites améliore le style des sites webs que vous visitez",
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_title": "Better Websites",
+    "default_popup": "public/gui.html",
+    "default_icon": "assets/logo.png"
+  },
+  "web_accessible_resources": [{
+    "matches": ["*://*/*"],
+    "resources": ["scripts/*", "websites/*", "styles/*", "assets/*"]
+  }],
+  "icons": {
+    "16": "assets/logo.png",
+    "32": "assets/logo.png",
+    "48": "assets/logo.png",
+    "128": "assets/logo.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "liamgen.pro@gmail.com"
+    }
+  }
+}
