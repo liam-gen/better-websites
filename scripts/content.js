@@ -26,7 +26,6 @@ function getCanonicalHost(hostname) {
             return
         }
         
-
         await console.log("BW - Load default style")
 
         style = await document.createElement('link');
