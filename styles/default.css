@@ -148,3 +148,7 @@
   #better-settings-text-color::-webkit-color-swatch{
     border-radius: 5px
   }
+
+  .swal2-modal{
+    font-size: 20px;
+  }
