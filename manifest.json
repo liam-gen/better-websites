@@ -18,7 +18,7 @@
     "default_icon": "assets/logo.png"
   },
   "web_accessible_resources": [{
-    "matches": ["*://*/*", "*://*.bing.com/*"],
+    "matches": ["*://*/*"],
     "resources": ["scripts/*", "websites/*", "styles/*", "assets/*"]
   }],
   "icons": {
@@ -26,10 +26,5 @@
     "32": "assets/logo.png",
     "48": "assets/logo.png",
     "128": "assets/logo.png"
-  },
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "liamgen.pro@gmail.com"
-    }
   }
 }
