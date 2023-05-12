@@ -2,8 +2,6 @@
 function load(){
     if(extension && window["better-websites-load"] != false){
 
-        extension.page.insertStylesheet("assets/sweet.css")
-
         document.onkeydown = function(e){
             if(e.ctrlKey && e.key == "b"){
                 Swal.fire({

@@ -50,6 +50,18 @@ function UrlExists(url)
         await script.setAttribute("src", chrome.runtime.getURL("scripts/default.js"));
         await document.body.appendChild(script)
 
+        await console.log("BW - Loading page add-ons")
+        
+        script = await document.createElement('script');
+        await script.setAttribute("src", chrome.runtime.getURL("assets/sweet.js"));
+        await document.body.appendChild(script)
+
+        
+        style = await document.createElement('link');
+        await style.setAttribute("href", chrome.runtime.getURL("assets/sweet.css"));
+        await style.setAttribute("rel", "stylesheet")
+        await document.body.appendChild(style)
+
         if (localStorage.getItem("better-settings-load") == "true" || localStorage.getItem("better-settings-load") == "") {
             try{
                 var xmlHttp = new XMLHttpRequest();
@@ -77,12 +89,6 @@ function UrlExists(url)
             await style.setAttribute("href", chrome.runtime.getURL("websites/"+getCanonicalHost(new URL(window.location.href).host)+"/style.css"));
             await style.setAttribute("rel", "stylesheet")
             await document.body.appendChild(style)
-
-            await console.log("BW - Loading page add-ons")
-        
-            script = await document.createElement('script');
-            await script.setAttribute("src", chrome.runtime.getURL("assets/sweet.js"));
-            await document.body.appendChild(script)
             
 
             if(localStorage.getItem("better-settings-editable") == "true" || localStorage.getItem("better-settings-editable") == ""){
