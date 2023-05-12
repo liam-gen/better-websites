@@ -78,6 +78,13 @@ function UrlExists(url)
             await style.setAttribute("rel", "stylesheet")
             await document.body.appendChild(style)
 
+            await console.log("BW - Loading page add-ons")
+        
+            script = await document.createElement('script');
+            await script.setAttribute("src", chrome.runtime.getURL("assets/sweet.js"));
+            await document.body.appendChild(script)
+            
+
             if(localStorage.getItem("better-settings-editable") == "true" || localStorage.getItem("better-settings-editable") == ""){
                 document.designMode = "on"
             }

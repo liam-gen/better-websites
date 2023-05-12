@@ -2,7 +2,6 @@
 function load(){
     if(extension && window["better-websites-load"] != false){
 
-        extension.page.loadScript("assets/sweet.js")
         extension.page.insertStylesheet("assets/sweet.css")
 
         document.onkeydown = function(e){
