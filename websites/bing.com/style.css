@@ -251,3 +251,62 @@ a .ris_infotxt{
 .hbic_col, .hb_title_col, .hb_value_col{
     color: var(--text-color) !important;
 }
+.richrsrailtitle h2{
+    color: var(--text-color) !important;
+    font-weight: bold ;
+}
+.hb_card{
+    background: transparent !important;
+}
+.hb_subtitlerow {
+    color: var(--text-color) !important;
+}
+#b_content #b_results .b_ans .dcont .dc_mn, #b_content .b_ans .dcont .dc_mn, #b_content #b_context .b_ans .dcont .dc_mn {
+    color: red;
+}
+#b_content #b_results .b_ans .dcont .dc_st, #b_content .b_ans .dcont .dc_st, #b_content #b_context .b_ans .dcont .dc_st{
+    color: var(--text-color) !important;
+}
+.hb_descrow{
+    color: var(--text-color) !important;
+}
+.me_content{
+    background-color: #000000 !important;
+}
+.pb-title-nav-strip__title{
+    color: var(--text-color) !important;
+}
+.pb-title-nav-strip {
+    background: transparent;
+}
+.me_section_title_ls h2{
+    color: var(--text-color) !important;
+}   
+.me_sectioncontent {
+    background: transparent;
+}
+.ctl_labels {
+    color: var(--text-color);
+}
+.me_subsection h3, .me_subsection_l label, .me-modal .title{
+    color: var(--text-color);
+}
+div.me_sidenav a, div.me_sidenav a:visited {
+    background: transparent !important;
+    border: 1px solid var(--text-color);
+}
+.me_content .ctxt, .me_content select{
+    background: transparent;
+    border: 1px solid var(--text-color);
+}
+#vsvoice, #rpp, #chatresponse{
+    color: var(--text-color) !important;
+}
+.me_sectioncontent {
+    background: black;
+}
+#trns_dict_drp{
+    background: transparent;
+    color: var(--text-color) !important;
+    border: 1px solid var(--text-color) !important;
+}
