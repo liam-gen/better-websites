@@ -21,6 +21,26 @@ class Page{
         return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
     }
 
+    waitElement(selector) {
+        return new Promise(resolve => {
+            if (document.querySelector(selector)) {
+                return resolve(document.querySelector(selector));
+            }
+    
+            const observer = new MutationObserver(mutations => {
+                if (document.querySelector(selector)) {
+                    resolve(document.querySelector(selector));
+                    observer.disconnect();
+                }
+            });
+    
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+        });
+    }
+
     insertCSS(css, where="beforeend"){
         document.body.insertAdjacentHTML(where, "<style>"+css+"</style>");
     }
@@ -82,11 +102,6 @@ class Modals{
         div.appendChild(content)
         modal.appendChild(div)
         document.body.appendChild(modal)
-
-        /*const html = extension.utf8(`<div id="${id}" class="bw-modal-window"><div><button onclick="extension.modals.closeModal('${id}')" title="Fermer" class="bw-modal-close bw-nobtn">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="gray" d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/></svg>
-        </button><h1>${title}</h1>${text}<br><span class="better-settings-copyrights">Powered by Better Websites <img src="${this.ext.href+"assets/logo.png"}" class="better-settings-logo"></span></div></div>`)*/
-        //this.ext.page.insertHTML(html)
     }
 
     openModal(id){
@@ -109,6 +124,7 @@ class Modals{
         localStorage.setItem('better-settings-load', document.getElementById("better-settings-load").checked)
         localStorage.setItem("better-settings-background", document.getElementById("better-settings-background").value)
         localStorage.setItem("better-settings-text-color", document.getElementById("better-settings-text-color").value)
+        localStorage.setItem("better-settings-editable", document.getElementById("better-settings-editable").checked)
         location.reload()
     }
 }

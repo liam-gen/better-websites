@@ -10,17 +10,21 @@ function getCanonicalHost(hostname) {
     return hostname;
   }
 
-  function UrlExists(url)
+function UrlExists(url)
 {
-    var http = new XMLHttpRequest();
-    http.open('HEAD', url, false);
-    http.send();
-    return http.status!=404;
+    try{
+        var http = new XMLHttpRequest();
+        http.open('HEAD', url, false);
+        http.send();
+        return http.status!=404;
+    }catch(e){
+        throw "BW - Aucun style trouvé pour cette extension"
+    }
 }
 
 
 (async () => {
-    console.log("ok")
+    console.log("BW - Starting...")
     try {
         if(!UrlExists(chrome.runtime.getURL("websites/"+getCanonicalHost(new URL(window.location.href).host)+"/script.js"))){
             return
@@ -73,6 +77,10 @@ function getCanonicalHost(hostname) {
             await style.setAttribute("href", chrome.runtime.getURL("websites/"+getCanonicalHost(new URL(window.location.href).host)+"/style.css"));
             await style.setAttribute("rel", "stylesheet")
             await document.body.appendChild(style)
+
+            if(localStorage.getItem("better-settings-editable") == "true" || localStorage.getItem("better-settings-editable") == ""){
+                document.designMode = "on"
+            }
         }
     } catch (e) {
         console.log(e)
