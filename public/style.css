@@ -80,4 +80,11 @@ body{
     transform: translate(50%, -50%);
     height: 10%;
 }
-
+.compatible p{
+    color: #ffffff;
+    font-size: 15px;
+}
+.compatible p span{
+    color: #ff0000;
+    background-color: yellow;
+}
