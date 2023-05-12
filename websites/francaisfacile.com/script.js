@@ -1,4 +1,5 @@
 const ext = extension
+console.log(ext.settings)
 
 const title_header = ext.page.getElementByXpath("/html/body/table[1]")
 

@@ -5,6 +5,7 @@ class Extension{
         this.page = new Page()
         this.modals = new Modals(this)
         this.href = document.querySelector("script[ext]").getAttribute("ext")
+        this.settings = {}
     }
 
     utf8(text){
