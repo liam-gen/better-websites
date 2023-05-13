@@ -1,3 +1,10 @@
+/*
+ * © Copyright 2023 Better Websites
+ * File version : 1.0.2-1
+ * File author : liamgen.js
+ * Informations : DO NOT TOUCH THIS FILE !
+*/
+
 window["better-modals-open"] = false
 
 class Extension{
@@ -14,6 +21,10 @@ class Extension{
         }catch(e){
             return text
         }
+    }
+
+    getURL(){
+        return document.querySelector("script[ext]").getAttribute("ext")
     }
 }
 
@@ -76,6 +87,8 @@ class Modals{
     }
 
     createModal(title, html, callback){
+
+        // `<br><span class="better-settings-copyrights">Propulsé par <code class='bw-copy'>Better Websites</code><img class='better-settings-logo' src="${this.ext.getURL()+"assets/logo.png"}"></span>`
 
         Swal.fire({
             title: extension.utf8(title),

@@ -1,62 +1,13 @@
-.bw-modal-window {
-    position: fixed !important;
-    background-color: rgba(255, 255, 255, 0.25) !important;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 99999999999999999999999999999;
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s;
-    color: black !important;
-  }
-  .bw-modal-window:target {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .bw-modal-window > div {
-    width: 400px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 2em;
-    background: white !important;
-  }
-  .bw-modal-window header {
-    font-weight: bold;
-  }
-  .bw-modal-window h1 {
-    font-size: 150%;
-    margin: 0 0 15px;
-  }
-  
-  .bw-modal-close {
-    color: #aaa !important;
-    line-height: 50px;
-    font-size: 80% !important;
-    position: absolute !important;
-    right: 20px !important;
-    text-align: center !important;
-    top: 20px !important;
-    width: 25px !important;
-    text-decoration: none !important;
-  }
-
-  .bw-modal-window > div {
-    border-radius: 1rem !important;
-  }
-  
-  .bw-modal-window div:not(:last-of-type) {
-    margin-bottom: 15px !important;
-  }
+/*
+ * © Copyright 2023 Better Websites
+ * File version : 1.0.2-2
+ * File author : liamgen.js
+*/
   
   .bw-logo {
-    max-width: 150px !important;
-    display: block !important;
+    max-width: 50px !important;
+    vertical-align: middle !important;
+    margin: 10px !important;
   }
 
   
@@ -119,6 +70,13 @@
     margin: 5px
   }
 
+  .bw-copy{
+    padding: 10px;
+    background: #2D2D2D;
+    border-radius: 10px;
+    vertical-align: middle;
+  }
+
   .better-settings-copyrights{
     text-align: center;
     background: #3D3D3D;
@@ -126,6 +84,7 @@
     border-radius: 10px;
     display:block;
     padding: 5px;
+    font-size: 15px;
   }
 
   .better-settings-modal-content{
@@ -143,6 +102,8 @@
     outline: none;
     padding: 0;
     cursor: pointer;
+    /*position: absolute;
+    left: 25%;*/
   }
 
   #better-settings-text-color::-webkit-color-swatch{

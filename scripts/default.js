@@ -1,8 +1,18 @@
+/*
+ * © Copyright 2023 Better Websites
+ * File version : 1.0.2-4
+ * File author : liamgen.js
+ * Informations : DO NOT TOUCH THIS FILE !
+*/
 
 function load(){
+
+    // Si on trouve la variable extension & le modification du style est activé
     if(extension && window["better-websites-load"] != false){
 
         document.onkeydown = function(e){
+
+            // Quand on fait Ctrl+B
             if(e.ctrlKey && e.key == "b"){
                 Swal.fire({
                     title: extension.utf8('Better Settings - Paramètres'),
@@ -21,7 +31,7 @@ function load(){
             }
         }
 
-
+        // On définis les variables en css
         var r = document.querySelector(':root');
         r.style.setProperty('--background', 'url("'+localStorage.getItem("better-settings-background")+'")');
         r.style.setProperty('--text-color', localStorage.getItem("better-settings-text-color"));

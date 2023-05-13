@@ -1,3 +1,9 @@
+/*
+ * © Copyright 2023 Better Websites
+ * File version : 1.0.2-0
+ * File author : Mitryguardians
+*/
+
 function webcompatible() {
     document.getElementById("compatible").style.visibility = "visible";
     document.getElementById("menu").style.visibility = "hidden";
