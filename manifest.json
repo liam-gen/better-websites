@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Better websites",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "liamgen.js",
   "description": "L'extension Better Websites améliore le style des sites webs que vous visitez",
   "content_scripts": [
