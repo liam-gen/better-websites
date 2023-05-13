@@ -1,0 +1,110 @@
+/* Mitryguardians
+* Version : 1.0.0
+* GitHub : Mitryguardians
+*/ 
+
+
+body{
+    background-color: #000000 !important;
+    background: var(--background) no-repeat;
+    background-size: cover;
+}
+.c-sub-header-nav{
+    background: transparent !important;
+}
+.h4,.c-tabs-content .active a,.h5 a, .sub-nav_content ul li a{
+    color: var(--text-color) !important;
+}
+#ajaxsearchpro4_2{
+    background: transparent !important;
+    border: 2px solid var(--text-color);
+    color: var(--text-color) !important;
+}
+
+#ajaxsearchpro4_1 .probox .promagnifier, #ajaxsearchpro4_2 .probox .promagnifier, div.asp_m.asp_m_4 .probox .promagnifier{
+    visibility: hidden !important;
+}
+#ajaxsearchpro4_2 .probox .proinput input.orig, div.asp_m.asp_m_4 .probox .proinput input.orig,::placeholder{
+    color: var(--text-color) !important;
+}
+#ajaxsearchpro3_1 .probox .promagnifier, #ajaxsearchpro3_2 .probox .promagnifier, div.asp_m.asp_m_3 .probox .promagnifier {
+    visibility: hidden !important;
+}
+#ajaxsearchpro3_2{
+    background: transparent !important;
+    border: 2px solid var(--text-color);
+    color: var(--text-color) !important;
+}
+.sub-menu{
+    background: #000000 !important;
+    color: var(--text-color);
+}
+.profile-manga, .summary-layout-1 {
+    background-color: #000000 !important;
+    background: transparent !important;
+    background-repeat: no-repeat ;
+    background-size: cover;
+}
+.post-title h1{
+    color: var(--text-color) !important;
+}
+.summary_content .post-content .post-content_item .summary-heading h5{
+    color: var(--text-color) !important;
+
+}
+.summary-content{
+    color: var(--text-color) !important;
+    background: transparent !important;
+    background-color: #000000 !important;
+}
+body.manga-page .profile-manga .tab-summary .summary_content_wrap .summary_content {
+    background: transparent !important;
+    background-color: #000000 !important;
+}
+.action_detail span{
+    color: var(--text-color);
+}
+body.manga-page .profile-manga .tab-summary .summary_image{
+    background: transparent !important;
+    background-color: #000000 !important;
+}
+.genres-content a{
+    color: blue;
+    border-bottom: 1px solid blue;
+}
+.genres-content a:hover{
+    border-bottom: 1px solid darkblue;
+}
+p{
+    color: var(--text-color);
+}
+.wp-manga-chapter a{
+    color: var(--text-color);
+}
+.wp-manga-chapter a:hover{
+    font-weight: bold;
+    color: blue;
+}
+
+.list-unstyled li a{
+    color: var(--text-color) !important;
+}
+.wp-pagenavi a{
+    background: transparent;
+    background-color: #000000;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+}
+.wp-pagenavi span{
+    background: transparent;
+    background-color: #000000;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.jw-media{
+    border: 1px solid var(--text-color);
+}
+.main-navigation .main-menu ul.main-navbar>li>a{
+    color: var(--text-color);
+}
