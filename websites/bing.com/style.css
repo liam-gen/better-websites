@@ -1,0 +1,318 @@
+/* Mitryguardians
+* Version : 1.0.0
+* GitHub : Mitryguardians
+*/ 
+
+
+#b_content{
+    background: var(--background) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-color: #000000 !important;
+}
+
+.null .sb_count{
+    color: var(--text-color) !important;
+}
+.null .ftrB .ftrH .fs_label{
+    color: var(--text-color) !important;
+}
+#b_tween .ftrB a.ftrH.b_selected, #b_tween .ftrB a.ftrH:hover, #b_tween .ftrB a.ftrH:focus{
+    background: #000000 !important;
+    color: var(--text-color);
+}
+.b_dropdown{
+    background: transparent !important;
+    background-color: #000000 !important;
+}
+.b_toggle{
+    color: var(--text-color) !important;
+}
+.b_toggle:hover{
+    color: #000000 !important;
+}
+.b_demoteText{
+    color: var(--text-color) !important;
+}
+#date_range_start, #date_range_end{
+    color: var(--text-color) !important;
+}
+.cbtn{
+    background: transparent !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--text-color);
+}
+.b_algo, .b_vtl_deeplinks{
+    background: transparent !important;
+}
+.b_topTitle a{
+    color: blue !important;
+}
+.b_deep{
+    color: var(--text-color) !important;
+}
+#c0, #sb_submit{
+    background: transparent !important;
+    border: 1px solid var(--text-color) !important;
+    color: var(--text-color) !important;
+}
+.b_caption .b_lineclamp2,.news_dt{
+    color: var(--text-color) !important;
+}
+.slide .b_cards .rc_vlImgFact, .rc_vlCard{
+    background-color: black !important;
+}
+.b_ans{
+    background: transparent !important;
+}
+.b_suggestionText strong{
+    color: var(--text-color);
+}
+.richrsrailsuggestion_text strong{
+    color: var(--text-color);
+}
+.df_alaskcarousel.rqnaContainerwithfeedback .openans_gradient_div{
+    background: #000000;
+}
+#b_results, #b_results .b_defaultText, #b_results>.b_pag a:hover, #b_tween .b_toggle:hover, #b_tween .b_highlighte, #b_content #b_context .richrsrailsuggestion a{
+    color: var(--text-color) !important;
+}
+.b_snippet p{
+    color: var(--text-color) !important;
+}
+.rel_ent_w{
+    background: transparent !important;
+}
+.b_caption p{
+    color: var(--text-color) !important;
+}
+.b_topicon_title, .l_ecrd_txt_pln, .na_t{
+    color: var(--text-color) !important;
+}
+.nws_cwrp{
+    background: transparent;
+    border: 1px solid var(--text-color);
+}
+.title h2 a, .title h2{
+    color: var(--text-color) !important;
+}
+.b_msg{
+    visibility: hidden;
+}
+.b_rs h2{
+    color: var(--text-color) !important;
+}
+.cent-dtab-style-content {
+    background: transparent !important;
+}
+.lite-entcard-blk{
+    background: transparent !important;
+    border: 1px solid white;
+}
+.lite-entcard-blk .l_ecrd_c2_svg svg{
+    visibility: hidden;
+}
+.sp_requery, .l_ecrd_txt_gl h3, .l_ecrd_txt_hlt, .b_rc_gb_widget_title, .b_rc_gb_w_item, .b_paractl, .iacd .irp a.imgText.trunc {
+    color: var(--text-color) !important;
+}
+#lgImgAnsContainer{
+    background: transparent !important;
+}
+.mmtitle, .b_wiki_cover{
+    visibility: hidden;
+}
+.b_rc_gb_w_content, #wikiWidgetContainer{
+    color: var(--text-color) !important;
+    background: transparent !important;
+}
+.b_rc_gb_sub_cell {
+    background: transparent !important;
+}
+.b_rc_gb_expansion_button{
+    visibility: hidden  ;
+}
+.content_wrapper{
+    background: transparent;
+}
+.destTtlGoBig, .b_focusLabel, .b_expansion_text{
+    color: var(--text-color) !important;
+}
+.b_suggestionText{
+    color: var(--text-color) !important;
+}   
+.b_wpTabsWrapper, #b_content #b_pole .ent-dtab-content, #b_content #b_pole .ent-dtab-content > div:first-child {
+    background: transparent !important;
+}
+.ent-dtab-ovr{
+    color: var(--text-color) !important;
+}
+.ent-dtab-ovr.ent-dtab-ovr-nl.def-override.ent-dtab-tabuxv1{
+    background: transparent !important;
+    border: none;
+}
+.ent-dtab-btn.def-override.ent-dtab-tabuxv1 {
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+}
+.ent-dtab-btn.def-override.ent-dtab-tabuxv1:hover{
+    border: 1px solid var(--text-color) !important;
+}
+a.ent-dtab-btn.ent-dtab-btn-hipo.def-override.ent-dtab-tabuxv1{
+    color: var(--text-color) !important;
+    background: transparent;
+    border: none;
+}
+a.ent-dtab-btn.ent-dtab-btn-hipo.def-override.ent-dtab-tabuxv1:hover{
+    border: 1px solid var(--text-color) !important;
+}
+#b_results #brsv3 .b_vList li a {
+    background: none;
+    color: var(--text-color) !important;
+    border: 1px solid var(--text-color) !important;
+}   
+.b_footer{
+    background: #000000 ;
+}
+#b_header{
+    background-color: #000000 !important;
+}
+a, #b_tween a:visited, #b_results .b_no a{
+    color: var(--text-color) !important;
+}
+#b-scopeListItem-menu .b_sp_over_menu {
+    background: #000000 !important;
+}
+.infobubble{
+    background: #000000 !important;
+    border: 1px solid var(--text-color) !important;
+}
+a .ris_infotxt{
+    color: var(--text-color);
+}
+.df_alaskcarousel .df_qntext {  
+    color: var(--text-color);
+}
+.df_alaskcarousel .df_qntext {
+    color: var(--text-color) !important;
+}
+.lite-entcard-main{
+    color: var(--text-color) !important;
+}
+#b_content .ans_nws .na_cnt .na_ccw.tc{
+    background: transparent;
+}
+#tob_rail_container .tob_rail_slide .tob_rail_item .title{
+    color: var(--text-color) !important;
+}   
+.mcp_footer {
+    color: var(--text-color) !important;
+}
+.b_footer, .b_footer a, .b_footer a:visited{
+    color: var(--text-color) !important;
+}
+.footer {
+    background: #000000 !important;
+}
+.dgControl_list, .dg_b{
+    background: #000000;
+}
+.touchQuery .carousel .carousel-controls, .touchQuery .carousel .items, .touchQuery .carousel .item, .touchQuery .carousel .carousel-controls .nav_left, .touchQuery .carousel .carousel-controls .nav_right, #rfPane{
+    background: #000000 !important;
+}
+#rfPaneIn .touchQuery .carousel-scroll-wrapper .suggestion-title-wrapper .suggestion-title, #b_tq_header .suggestion-title-wrapper .suggestion-title{
+    color: var(--text-color);
+}
+.inline_tile .carousel {
+    background-color: black;
+}
+.dg_b{
+    padding: 0;
+}
+.sydwrap_wrapper{
+    background: transparent  !important;
+    border: 1px solid wheat !important;
+} 
+.sydwrap_wrapper #syd_qna_suggestio{
+    margin: 0;
+}
+.syd_qna_answer_title_text{
+    color: var(--text-color) !important;
+}
+.b_wpt_bg .sydwrap_wrapper div#b_syd_sm_chat.sydwrap_sm_chat .b_wpt_chat{
+    background: rgb(78, 77, 77);
+}
+.eb_menIns span{
+    color: var(--text-color) !important;
+}
+.b_dmtab{
+    background: #000000 !important;
+}
+#tabcontrol_11_5AD178_navr, #tabcontrol_11_5AD178_navl{
+    background: #000000;
+}
+#id_hbfo{
+    background: #000000;
+}
+.hbic_col, .hb_title_col, .hb_value_col{
+    color: var(--text-color) !important;
+}
+.richrsrailtitle h2{
+    color: var(--text-color) !important;
+    font-weight: bold ;
+}
+.hb_card{
+    background: transparent !important;
+}
+.hb_subtitlerow {
+    color: var(--text-color) !important;
+}
+#b_content #b_results .b_ans .dcont .dc_mn, #b_content .b_ans .dcont .dc_mn, #b_content #b_context .b_ans .dcont .dc_mn {
+    color: red;
+}
+#b_content #b_results .b_ans .dcont .dc_st, #b_content .b_ans .dcont .dc_st, #b_content #b_context .b_ans .dcont .dc_st{
+    color: var(--text-color) !important;
+}
+.hb_descrow{
+    color: var(--text-color) !important;
+}
+.me_content{
+    background-color: #000000 !important;
+}
+.pb-title-nav-strip__title{
+    color: var(--text-color) !important;
+}
+.pb-title-nav-strip {
+    background: transparent;
+}
+.me_section_title_ls h2{
+    color: var(--text-color) !important;
+}   
+.me_sectioncontent {
+    background: transparent;
+}
+.ctl_labels {
+    color: var(--text-color);
+}
+.me_subsection h3, .me_subsection_l label, .me-modal .title{
+    color: var(--text-color);
+}
+div.me_sidenav a, div.me_sidenav a:visited {
+    background: transparent !important;
+    border: 1px solid var(--text-color);
+}
+.me_content .ctxt, .me_content select{
+    background: transparent;
+    border: 1px solid var(--text-color);
+}
+#vsvoice, #rpp, #chatresponse{
+    color: var(--text-color) !important;
+}
+.me_sectioncontent {
+    background: black;
+}
+#trns_dict_drp{
+    background: transparent;
+    color: var(--text-color) !important;
+    border: 1px solid var(--text-color) !important;
+}

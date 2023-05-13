@@ -1,9 +1,3 @@
-/*
-* © Copyright 2023 liamgen.js
-* Version : 1.0.0
-* GitHub : liam-gen
-*/
-
 const ext = extension
 
 const title_header = ext.page.getElementByXpath("/html/body/table[1]")
@@ -57,15 +51,7 @@ if(ext.page.elementExist(navbar)){
 
 const copyrights = ext.page.getElementByXpath("/html/body/div[3]")
 if (ext.page.elementExist(copyrights)) {
-    let div = document.createElement("div")
-    div.setAttribute("align", "center")
-    div.style = "margin: 30px;text-align: center"
-    div.onclick = function(){
-        ext.modals.createModal("Droits & Bas de page", `<div>Copyright <a href="https://www.francaisfacile.com/whoamif.php">Laurent Camus</a><br><br><a href="https://www.francaisfacile.com/feedbackf.php">En savoir plus, Aide, Contactez-nous</a> <a href="https://www.francaisfacile.com/conditions.php">Conditions d'utilisation</a> <a href="https://www.francaisfacile.com/conseils-de-securite.php">Conseils de sécurité</a> <a href="https://www.francaisfacile.com/plan-du-site.php">Plan du site</a> | <a href="https://www.francaisfacile.com/cgi2/faq/voir.php?id=93">Mentions légales / Vie privée</a> / <a href="https://www.francaisfacile.com/cgi2/faq/voir.php?id=249">Cookies.</a><br><br> Cours et exercices de français 100% gratuits, hors abonnement internet auprès d'un fournisseur d'accès.</div><br><div>Better websites by liamgen.js &copy; 2023</div><br><span><a href="javascript:Sddan.cmp.displayUI()">Modifier vos préférences de cookies</a> - <a href="https://www.francaisfacile.com/copyright.php">Copyrights complets</a></span><br>`)
-    }
-    div.innerHTML = "<button class='bw-nobtn bw-btn'>Afficher le bas de page</button>"
-    copyrights.innerHTML = ""
-    copyrights.appendChild(div)
+    copyrights.innerHTML = `<div align="center" style="margin: 30px;" onclick="extension.modals.openModal('copyrights')"><button class="nobtn btn">Voir le bas de page</button></div>`
 }
 
 const div_content = ext.page.getElementByXpath("/html/body/table[3]/tbody/tr/td/div")
@@ -77,3 +63,5 @@ const after_copyrights = ext.page.getElementByXpath("/html/body/font")
 if (ext.page.elementExist(after_copyrights)) {
     after_copyrights.remove()
 }
+
+ext.modals.createModal("copyrights", "Bas de page", `<div>Copyright <a href="https://www.francaisfacile.com/whoamif.php">Laurent Camus</a><br><br><a href="https://www.francaisfacile.com/feedbackf.php">En savoir plus, Aide, Contactez-nous</a> <a href="https://www.francaisfacile.com/conditions.php">Conditions d'utilisation</a> <a href="https://www.francaisfacile.com/conseils-de-securite.php">Conseils de sécurité</a> <a href="https://www.francaisfacile.com/plan-du-site.php">Plan du site</a> | <a href="https://www.francaisfacile.com/cgi2/faq/voir.php?id=93">Mentions légales / Vie privée</a> / <a href="https://www.francaisfacile.com/cgi2/faq/voir.php?id=249">Cookies.</a><br><br> Cours et exercices de français 100% gratuits, hors abonnement internet auprès d'un fournisseur d'accès.</div><br><div>Better websites by liamgen.js &copy; 2023</div><br><span><a href="javascript:Sddan.cmp.displayUI()">Modifier vos préférences de cookies</a> - <a href="https://www.francaisfacile.com/copyright.php">Copyrights complets</a></span><br>`)
