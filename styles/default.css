@@ -143,12 +143,10 @@
     outline: none;
     padding: 0;
     cursor: pointer;
+    position: absolute;
+    left: 25%;
   }
 
   #better-settings-text-color::-webkit-color-swatch{
     border-radius: 5px
-  }
-
-  .swal2-modal{
-    font-size: 20px;
   }
