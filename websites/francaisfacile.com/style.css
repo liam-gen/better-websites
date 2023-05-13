@@ -1,10 +1,11 @@
-/*
-* © Copyright 2023 liamgen.js
-* Version : 1.0.0
-* GitHub : liam-gen
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Sigmar&display=swap');
+
+:root{
+    --background: url();
+    --text-color: #FFFFFF
+}
+
+/* EDITED CONTENT */
 
 .bw-content{
     background-color: #2D2D2D !important;

@@ -1,8 +1,3 @@
-/*
-* © Copyright 2023 liamgen.js
-* Version : 1.0.0
-* GitHub : liam-gen
-*/
 const ext = extension
 
 const title_header = ext.page.getElementByXpath("/html/body/table[1]")
