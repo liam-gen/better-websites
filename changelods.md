@@ -1,2 +1,9 @@
 - Modification du style de la fenêtre
 - Modification des informations publiques
+- Ajout d'un mode design de la page
+- Ajout d'une option de modification de police
+- Optimisation du temps de chargement
+- Modification des classes pour les développeurs
+- Modification pour la vérification Opera Addons
+- Modification de la popup
+- Ajout de Paramètres dans le menu de contexte

@@ -1,0 +1,178 @@
+/*
+* © Copyright 2023 liamgen.js
+* Version : 1.0.0
+* GitHub : liam-gen
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text&display=swap');
+
+body{
+    color: var(--text-color);
+    background-color: #1D1D1D !important;
+    background: var(--background) no-repeat center center fixed;
+    font-family: var(--font)
+}
+
+#navtabs .floatcontainer{
+    background : darkgray;
+}
+.blockbody{
+    background: #2D2D2D
+}
+.blockrow{
+    background: transparent !important;
+}
+#forumrules{
+    background: #1D1D1D !important;
+}
+.forumrow{
+    background: #2D2D2D !important;
+    color: var(--text-color) !important;
+}
+
+.forumtitle a{
+    color: var(--text-color) !important;
+}
+
+.contenuPage{
+    background: var(--background) no-repeat center center fixed;
+    background-color: #1D1D1D !important;
+}
+
+body a{
+    color: lightblue;
+}
+
+a.username{
+    color: lightblue !important
+}
+
+.time{
+    color: lightskyblue
+}
+
+#gabarit_superieur ul li {
+    transform: none !important
+}
+
+#gabarit-new-logo{
+    visibility: hidden;
+}
+
+.bw-navbar{
+    padding: 15px;
+}
+
+.bw-navbar ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.bw-navbar ul li a{
+    background-color: #1D1D1D;
+    color: white;
+    padding: 15px;
+}
+
+#gabarit_menu{
+    display: none;
+}
+
+header{
+    position: fixed;
+    z-index: 9999;
+    width:100%;
+    margin-top: -53px;
+}
+
+.contenuPage{
+    margin-top: 53px;
+}
+#gabarit_b1{
+    height: 100%;
+    padding: 10px
+}
+
+#gabarit_barre2{
+    display:none
+}
+
+.navlinks{
+    background: #4D4D4D;
+    border-radius: 5px;
+    border-top: none;
+}
+
+.footer{
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    background: #4D4D4D;
+    border-radius: 5px;
+    border: none;
+}
+
+#gabarit_responsable{
+    display: none;
+}
+
+.forumactionlinks .rsslink{
+    display: none !important;
+}
+
+.forumbit_nopost{
+    margin-top: 10px;
+}
+
+#ano_colonne_droite{
+    display: none !important;
+}
+
+.body_wrapper{
+    width: unset !important;
+}
+
+.userinfo{
+    background: #3D3D3D !important;
+    color: white !important;
+}
+
+.postbody{
+    background: #4D4D4D !important;
+    color: white !important;
+}
+
+.postdetails{
+    background: #3D3D3D !important;
+    color: white !important;
+}
+
+.postcontent{
+    color: white;
+}
+
+.postbit .posttitle, .postbitlegacy .title{
+    color: white;
+}
+
+.postfoot div{
+    background: #2D2D2D !important;
+    color: white !important;
+}
+
+.postfoot a{
+    color: white !important;
+}
+
+.newreply{
+    background: transparent !important;
+}
+
+*{
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+div[background=lightgray]{
+    display: none !important;
+}

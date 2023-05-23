@@ -1,0 +1,21 @@
+/*
+* © Copyright 2023 liamgen.js
+* Version : 1.0.0
+* GitHub : liam-gen
+*/
+
+body{
+    background: var(--background) no-repeat center center fixed;
+}
+
+*:not(a){
+    color: var(--text-color);
+}
+
+.footer{
+    backdrop-filter: blur(50px);
+}
+
+.app-badges .footer-sidebar-content{
+    background-color: #2d2d2d
+}

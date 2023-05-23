@@ -6,3 +6,7 @@
 extension.page.waitElement("#GInterface_T").then(element => {
     element.className = "interface_affV"
 })
+
+let len = document.querySelector("div[role=treegrid]").childNodes.length
+
+document.querySelector("div[role=treegrid]").childNodes.forEach(v => console.log(v))

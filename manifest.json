@@ -1,25 +1,65 @@
 {
   "manifest_version": 3,
   "name": "Better websites",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "author": "liamgen.js",
   "description": "L'extension Better Websites améliore le style des sites webs que vous visitez",
+  "permissions": [
+    "tabs",
+    "downloads",
+    "storage",
+    "notifications",
+    "activeTab",
+    "nativeMessaging",
+    "scripting",
+    "contextMenus",
+    "webRequest"
+  ],
+  "host_permissions": [ "*://*/*"],
   "content_scripts": [
     {
       "js": ["scripts/content.js"],
       "matches": [
-        "*://*/*"
+        "*://*.bing.com/*",
+        "*://*.developpez.net/*",
+        "*://*.developpez.com/*",
+        "*://*.francaisfacile.com/*",
+        "*://*.google.com/*",
+        "*://*.index-education.net/*",
+        "*://*.itslearning.com/*",
+        "*://*.mesexercices.com/*",
+        "*://*.tolearnfrench.com/*",
+        "*://*.voiranime.com/*",
+        "*://*.youtube.com/*",
+        "*://*.wikipedia.org/*"
       ]
     }
   ],
+  "background":{
+    "service_worker": "background.js",
+    "matches": [
+      "*://*.bing.com/*",
+      "*://*.developpez.net/*",
+      "*://*.developpez.com/*",
+      "*://*.francaisfacile.com/*",
+      "*://*.google.com/*",
+      "*://*.index-education.net/*",
+      "*://*.itslearning.com/*",
+      "*://*.mesexercices.com/*",
+      "*://*.tolearnfrench.com/*",
+      "*://*.voiranime.com/*",
+      "*://*.youtube.com/*",
+      "*://*.wikipedia.org/*"
+    ]
+  },
   "action": {
     "default_title": "Better Websites",
-    "default_popup": "public/gui.html",
+    "default_popup": "public/index.html",
     "default_icon": "assets/logo.png"
   },
   "web_accessible_resources": [{
     "matches": ["*://*/*"],
-    "resources": ["scripts/*", "websites/*", "styles/*", "assets/*"]
+    "resources": ["scripts/*", "websites/*", "styles/*", "assets/*", "fonts/*", "C:\\test"]
   }],
   "icons": {
     "16": "assets/logo.png",

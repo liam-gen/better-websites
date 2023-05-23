@@ -7,34 +7,53 @@
 
 function load(){
 
+    
+
     // Si on trouve la variable extension & le modification du style est activé
     if(extension && window["better-websites-load"] != false){
+
+        window.addEventListener('replaceState', function(e) {
+            if(new URL(window.location.href).searchParams.get("bw-settings") == 'show'){
+                let myurl = new URL(window.location.href)
+                myurl.searchParams.delete("bw-settings")
+                const nextURL = myurl.toString();
+                const nextTitle = 'My new page title';
+                const nextState = { additionalInformation: 'Updated the URL with JS' };
+
+
+                history.replaceState(nextState, nextTitle, nextURL);
+                extension.openSettings()
+                
+            }
+
+            if(new URL(window.location.href).searchParams.get("bw-custom-settings") == 'show'){
+                let myurl = new URL(window.location.href)
+                myurl.searchParams.delete("bw-custom-settings")
+                const nextURL = myurl.toString();
+                const nextTitle = 'My new page title';
+                const nextState = { additionalInformation: 'Updated the URL with JS' };
+
+
+                history.replaceState(nextState, nextTitle, nextURL);
+                extension.openCustomSettings()
+                
+            }
+        });
 
         document.onkeydown = function(e){
 
             // Quand on fait Ctrl+B
             if(e.ctrlKey && e.key == "b"){
-                Swal.fire({
-                    title: extension.utf8('Better Settings - Paramètres'),
-                    html: extension.utf8(`<div><input style="transform: scale(1.5)" type="checkbox" id="better-settings-load" ${localStorage.getItem("better-settings-load") == "true" || localStorage.getItem("better-settings-load") == "" ? "checked" : "unchecked"}>&nbsp;&nbsp;<span>Modifier le style du site</span></div><div><span>Utiliser un fond personnalisé</span><br><input style="width: 90%" type="text" id="better-settings-background" class="better-settings-input" value="${localStorage.getItem("better-settings-background")}"></div><div><span>Modifier la couleur du texte</span><br><input type="color" id="better-settings-text-color" value="${localStorage.getItem("better-settings-text-color") || "#FFFFFF"}"><br><br><input style="transform: scale(1.5)" type="checkbox" id="better-settings-editable" ${localStorage.getItem("better-settings-editable") == "true" || localStorage.getItem("better-settings-editable") == "" ? "checked" : "unchecked"}>&nbsp;<span>Rendre le contenu modifiable</span></div>`),
-                    showDenyButton: true,
-                    showCancelButton: false,
-                    confirmButtonText: 'Sauvegarder',
-                    denyButtonText: `Annuler`,
-                  }).then((result) => {
-                    if (result.isConfirmed) {
-                        extension.modals.setSettings()
-                    } else if (result.isDenied) {
-                      return
-                    }
-                  })
+                extension.openSettings()
             }
         }
 
         // On définis les variables en css
         var r = document.querySelector(':root');
-        r.style.setProperty('--background', 'url("'+localStorage.getItem("better-settings-background")+'")');
+        let bg = localStorage.getItem("better-settings-background") ? localStorage.getItem("better-settings-background") : ""
+        r.style.setProperty('--background', 'url("'+bg+'")');
         r.style.setProperty('--text-color', localStorage.getItem("better-settings-text-color"));
+        r.style.setProperty('--font', localStorage.getItem("better-settings-font"));
         window["better-websites-load"] = true
     }else{
         setTimeout(load, 100)

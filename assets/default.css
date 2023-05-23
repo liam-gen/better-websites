@@ -43,6 +43,28 @@
     color: black;
   }
 
+  #better-settings-font{
+    width: 100%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  }
+
+  #better-settings-font::-ms-expand {
+    display: none;
+  }
+
+  #better-settings-font:focus{
+    outline: none;
+  }
+
   .better-settings:hover{
     opacity: 0.9
   }
@@ -106,4 +128,8 @@
 
   #better-settings-text-color::-webkit-color-swatch{
     border-radius: 5px
+  }
+
+  .swal2-container{
+    z-index:999999999999999999999999999 !important;
   }

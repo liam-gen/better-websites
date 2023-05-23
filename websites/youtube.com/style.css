@@ -1,0 +1,12 @@
+ytd-app{
+    color: var(--text-color);
+    background: var(--background) no-repeat center center fixed !important;
+}
+
+ytd-mini-guide-renderer{
+    background: var(--background) no-repeat center center fixed;
+}
+
+#content{
+    background: var(--background) no-repeat center center fixed;
+}

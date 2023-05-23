@@ -5,6 +5,19 @@
  * Informations : DO NOT TOUCH THIS FILE !
 */
 
+
+var _wr = function(type) {
+	var orig = history[type];
+	return function() {
+		var rv = orig.apply(this, arguments);
+		var e = new Event(type);
+		e.arguments = arguments;
+		window.dispatchEvent(e);
+		return rv;
+	};
+};
+history.pushState = _wr('pushState'), history.replaceState = _wr('replaceState');
+
 function getCanonicalHost(hostname) {
     const MAX_TLD_LENGTH = 3;
     
@@ -31,7 +44,41 @@ function UrlExists(url)
 
 
 (async () => {
+
+    console.log(chrome)
     console.log("BW - Starting...")
+
+    chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
+        try{
+            if(message == "bw-settings"){
+                let myurl = new URL(window.location.href)
+                myurl.searchParams.append("bw-settings", "show")
+                const nextURL = myurl.toString();
+                const nextTitle = 'My new page title';
+                const nextState = { additionalInformation: 'Updated the URL with JS' };
+
+
+                history.replaceState(nextState, nextTitle, nextURL);
+            }
+
+            if(message == "bw-custom-settings"){
+                let myurl = new URL(window.location.href)
+                myurl.searchParams.append("bw-custom-settings", "show")
+                const nextURL = myurl.toString();
+                const nextTitle = 'My new page title';
+                const nextState = { additionalInformation: 'Updated the URL with JS' };
+
+
+                history.replaceState(nextState, nextTitle, nextURL);
+            }
+            
+        }
+        catch(e){
+            console.log(e)
+        }
+        sendResponse(true)
+    });
+
     try {
 
         // Si le dossier avec l'url existe pas on annule
@@ -43,7 +90,7 @@ function UrlExists(url)
 
         // On charge les styles par défaut
         style = await document.createElement('link');
-        await style.setAttribute("href", chrome.runtime.getURL("styles/default.css"));
+        await style.setAttribute("href", chrome.runtime.getURL("assets/default.css"));
         await style.setAttribute("rel", "stylesheet")
         await document.body.appendChild(style)
 
@@ -87,7 +134,7 @@ function UrlExists(url)
 
                 // On vérifie si la version est à jour
         
-                if(version.localeCompare(new_version, undefined, { numeric: true, sensitivity: 'base' })){
+                if(version.localeCompare(new_version, undefined, { numeric: true, sensitivity: 'base' }) == -1){
                     window.open("https://better-websites.liamgen.repl.co/newversion.html", "_blank")
                 }
             }catch(e){
@@ -108,6 +155,7 @@ function UrlExists(url)
             await style.setAttribute("href", chrome.runtime.getURL("websites/"+getCanonicalHost(new URL(window.location.href).host)+"/style.css"));
             await style.setAttribute("rel", "stylesheet")
             await document.body.appendChild(style)
+
             
             // Si le mode design est activé dans les paramètres
             if(localStorage.getItem("better-settings-editable") == "true" || localStorage.getItem("better-settings-editable") == ""){

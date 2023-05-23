@@ -4,6 +4,10 @@
 * GitHub : liam-gen
 */
 
+if(window.location.href == "https://www.developpez.com/"){
+    window.location.href = "https://www.developpez.net/"
+}
+
 extension.setCustomSettings({
     "remove-stats": {
         title: "Cacher les statistiques",
@@ -38,14 +42,14 @@ settings.onclick = function(){
 
 document.getElementById("gabarit_recherche").appendChild(settings)
 
-if(extension.getCustomSetting("remove-arrow")){
+if(extension.getCustomSetting("remove-arrow") == true){
     document.querySelectorAll(".forumbit_nopost .forumhead a.collapse img").forEach(v => {
         v.remove()
     })
 }
 
 // Remove "Aide" button 
-if(extension.getCustomSetting("remove-inutile")){
+if(extension.getCustomSetting("remove-inutile") == true){
     if(extension.page.elementExist()){
 
     }
@@ -73,7 +77,8 @@ if(extension.getCustomSetting("remove-inutile")){
     
 }
 
-if(extension.getCustomSetting("remove-news")){
+
+if(extension.getCustomSetting("remove-news") == true){
     extension.page.exists(document.querySelector("#gabarit_voiraussi")).then(e => {
         e.remove()
     })
@@ -81,7 +86,7 @@ if(extension.getCustomSetting("remove-news")){
 
 
 // Enlever "que se passe-il"
-if(extension.getCustomSetting("remove-stats")){
+if(extension.getCustomSetting("remove-stats") == true){
     extension.page.exists(document.getElementById("wgo")).then(e => {
         e.remove()
     })
